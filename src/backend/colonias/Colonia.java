@@ -19,14 +19,16 @@ public class Colonia{
         this.missoesConcluidas = 0;
         this.habitantes = new ArrayList<>();
     }
-
+    
+    public ArrayList<Habitante> getHabitantes(){
+        return habitantes;
+    }
+    
     public void adicionarHabitante(Habitante h){
         habitantes.add(h);
     }
 
-    public ArrayList<Habitante> getHabitantes(){
-        return habitantes;
-    }
+    
 
     public boolean removerHabitante(int id){
         for( int i = 0; i < habitantes.size(); i++){

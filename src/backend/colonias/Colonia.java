@@ -10,7 +10,7 @@ public class Colonia{
     private int missoesConcluidas = 0;
 
 
-    private ArrayList<Habitante> habitantes;
+    private List<Habitante> habitantes;
 
     public Colonia(int id, String nome, String planeta){
         this.id = id;
@@ -20,7 +20,7 @@ public class Colonia{
         this.habitantes = new ArrayList<>();
     }
     
-    public ArrayList<Habitante> getHabitantes(){
+    public List<Habitante> getHabitantes(){
         return habitantes;
     }
     
@@ -42,8 +42,8 @@ public class Colonia{
 
     public Habitante procurarHabitanteporId(int id){
         for ( Habitante h : habitantes){
-            if(h.getId() == id){
-                return h;
+            if(h.getId() == id)
+                            return h;
             }
         }
         return null;

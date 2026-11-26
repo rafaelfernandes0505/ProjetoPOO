@@ -1,10 +1,28 @@
 package backend.gestores;
-import backend.habitantes.Habitante;
-import backend.colonias.Colonia;
 
+import java.util.ArrayList;
 
-public class Gestor extends Habitante{
-    public Gestor(int id, String nome, String email,Colonia colonia){
-        super(id,nome,email,colonia);
+import backend.missoes.Missao;
+import backend.Utilizadores.Utilizador;
+
+public class Gestor extends Utilizador {
+
+    private ArrayList<Missao> missoes;
+
+    public Gestor(String nome, String email, String password) {
+        super(nome, email, password);
+        this.missoes = new ArrayList<>();
+    }
+
+    public void adicionarMissao(Missao m) {
+        missoes.add(m);
+    }
+
+    public int getNumeroMissoes() {
+        return missoes.size();
+    }
+
+    public ArrayList<Missao> getMissoes() {
+        return missoes;
     }
 }

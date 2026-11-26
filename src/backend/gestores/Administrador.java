@@ -1,10 +1,10 @@
 package backend.gestores;
-import backend.habitantes.Habitante;
-import backend.colonias.Colonia;
 
+import backend.Utilizadores.Utilizador;
 
-public class Administrador{
-    public Administrador(int id, String nome, String email){
-        
+public class Administrador extends Utilizador {
+
+    public Administrador(String nome, String email, String password) {
+        super(nome, email, password);
     }
 }

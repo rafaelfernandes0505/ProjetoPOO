@@ -4,8 +4,9 @@ import backend.colonias.Colonia;
 public class Engenheiro extends Habitante{
     String especialidadeTecnica;
 
-    public Engenheiro(int id, String nome, String email, String especialidadeTecnica,Colonia colonia){
-        super(id, nome, email,colonia);
+    public Engenheiro(String nome, String email, String password,
+                     String profissao, Colonia colonia, String especialidadeTecnica) {
+        super(nome, email, password, profissao, colonia);
         this.especialidadeTecnica = especialidadeTecnica;
     }
 

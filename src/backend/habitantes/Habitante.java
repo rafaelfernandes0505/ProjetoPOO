@@ -1,45 +1,22 @@
 package backend.habitantes;
+
 import backend.colonias.Colonia;
+import backend.Utilizadores.Utilizador;
 
+public abstract class Habitante extends Utilizador {
 
-
-public abstract class Habitante{
-    private int id;
-    private String nome;
-    private String email;
-    private static int proximoId = 1;
+    private String profissao;
     private Colonia colonia;
 
-    public Habitante(int id, String nome, String email, Colonia colonia){
-        this.id = proximoId++;
-        this.nome = nome;
-        this.email = email;
+    public Habitante(String nome, String email, String password,
+                     String profissao, Colonia colonia) {
+        super(nome, email, password);
+        this.profissao = profissao;
         this.colonia = colonia;
     }
 
-    public int getId() {
-        return id;
-    }
+    public String getProfissao() { return profissao; }
+    public void setProfissao(String profissao) { this.profissao = profissao; }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public Colonia getColonia() {
-        return colonia;
-    }
-
-    public void setNome(String nome) {
-    this.nome = nome;
-    }
-
-    public void setEmail(String email) {
-    this.email = email;
-    }
-
-    
+    public Colonia getColonia() { return colonia; }
 }

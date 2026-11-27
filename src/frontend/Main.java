@@ -10,9 +10,8 @@ public class Main {
         Sistema sistema = new Sistema();
 
         // 3. Administrador por defeito, para o primeiro login
-        sistema.adicionarUtilizador(
-            new Administrador("Admin1", "Admin123@gmail.com", "admin123")
-        );
+        Administrador administrador = new Administrador("Admin1", "Admin123@gmail.com", "admin123");
+        sistema.adicionarUtilizador(administrador);
 
         // 4. Cria o Menu e entrega-lhe o Sistema
         menu menu = new menu(sistema);

@@ -13,6 +13,11 @@ public class Main {
         Administrador administrador = new Administrador("Admin1", "Admin123@gmail.com", "admin123");
         sistema.adicionarUtilizador(administrador);
 
+        Administrador administrador2 = new Administrador("Admin2", "Admin2123@gmail.com", "admin123");
+        sistema.adicionarUtilizador(administrador2);
+
+
+
         // 4. Cria o Menu e entrega-lhe o Sistema
         menu menu = new menu(sistema);
 
